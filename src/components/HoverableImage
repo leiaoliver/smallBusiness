@@ -1,0 +1,35 @@
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+const HoverableImage = ({ src, alt, className, style, hoverStyle }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      style={isHovered ? { ...style, ...hoverStyle } : style}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    />
+  );
+};
+
+HoverableImage.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  hoverStyle: PropTypes.object,
+};
+
+export default HoverableImage;

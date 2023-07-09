@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* Estilos para a barra de rolagem */
+/* Substitua .your-container pelo seletor do seu contêiner que possui a rolagem */
+.your-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.your-container::-webkit-scrollbar-track {
+  background-color: #191919;
+}
+
+.your-container::-webkit-scrollbar-thumb {
+  background-color: #191919;
+  border-radius: 4px;
+}
+
+.your-container::-webkit-scrollbar-thumb:hover {
+  background-color: #191919;
+}
+
+ul li img:hover {
+  color: #05daca;
+}
